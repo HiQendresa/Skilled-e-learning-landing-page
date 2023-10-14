@@ -1,0 +1,259 @@
+:root {
+    --clr-green-light: 157, 36%, 37%;
+    --clr-green-dark: 158, 42%, 18%;
+    --cream-bg: 28, 38%, 92%;
+    --Aurometal-Saurus: 228, 12%, 48%;
+    --Gunmetal: 212, 21%, 14%;
+    --Pure-White: 0 0% 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+}
+main {
+    .kv-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen  and (min-width: 760px){
+            flex-direction: row;
+        }
+        .kv-image {
+           .img-desktop {
+            display: none;
+           }
+           @media screen  and (min-width: 760px){
+            .img-desktop {
+                display: block;
+            }
+
+            .img-mobile {
+                display: none;
+            }
+        }
+        }
+
+        .kv-content {
+            .kv-title {
+                width: 343px;
+
+                color: var(--13183F, #13183F);
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* Heading L */
+                font-family: Plus Jakarta Sans;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+
+            .kv-description {
+                width: 343px;
+                color: var(--83869A, #83869A);
+                font-family: Plus Jakarta Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                margin-bottom: 15px;
+            }
+
+        }
+    
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+        
+        .service-card {
+            width: 350px;
+            height: 322px;
+            padding: 20px;
+
+            border-radius: 15px;
+            background: var(--FFFFFF, #FFF);
+            box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .icon {
+                width: 56px;
+                height: 56px;
+            }
+
+            .card-title {
+                color: var(--13183F, #13183F);
+                font-family: Plus Jakarta Sans;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+
+            .card-description {
+                width: 286px;
+
+                color: var(--83869A, #83869A);
+                font-family: Plus Jakarta Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px; 
+            }
+
+        }
+
+        .main-card {
+            width: 343px;
+            height: 120px;
+
+            display: flex;
+            align-items: center !important;
+            flex-direction: row;
+
+            border-radius: 15px;
+            background: var(--Gradient-1, linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+
+            color: var(--FFFFFF, #FFF);
+            font-feature-settings: 'clig' off, 'liga' off;
+            /* Heading M */
+            font-family: Plus Jakarta Sans;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 40px; 
+            text-align: center !important;
+
+            @media screen and (min-width: 768px) {
+                width: 339px;
+                height: 259px;
+            }
+        }
+    }
+}
+
+// components
+.btn {
+    width: 140px;
+    height: 48px;
+    flex-shrink: 0;
+    
+    color: var(--FFFFFF, #fff);
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+
+    @media screen and (min-width: 760px) {
+        width: 167px;
+        height: 56px;
+
+        font-size: 16px;
+    }
+}
+
+.btn-black {
+    border-radius: 28px;
+    background: var(--13183F, #13183f);
+    outline: none;
+    border: none;
+
+    &:hover{
+        background: var(--666CA3, #666CA3);
+    }
+}
+
+.btn-pink {
+    border-radius: 31.5px;
+    background: var(--Gradient-1, linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+    outline: none;
+    border: none;
+
+    &:hover{
+        background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+    }
+}
+.btn-orange{
+    border-radius: 31.5px;
+    border: none;
+    outline: none;
+    
+    color: var(--F74780, #F74780);
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+
+    &:hover{
+        color: var(--FFA7C3, #FFA7C3);
+    }
+}
